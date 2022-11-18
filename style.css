@@ -1,0 +1,118 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(https://media.istockphoto.com/id/874475118/photo/black-and-white-horizontal-background-divided-in-half-with-both-colors.jpg?s=170667a&w=0&k=20&c=3T31WddZOQCpsycvDpJc3g0AamQRdvEAoITFDfcuAw8=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.header{
+    text-transform: uppercase;
+    letter-spacing: 40px;
+    font-size: 40px;
+    text-align: center;
+    color: black; 
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s*var(--letter));
+}
+@keyframes flip{
+    0% , 50%{
+    transform: rotateY(360deg);
+    }
+}
+.header .color{
+    color: white;
+}
+p{
+    margin-top: 50px;
+    letter-spacing: 4px;
+    text-align:center ;
+    font-size:15px;
+    text-transform: capitalize;
+}
+.clock{
+    display: flex;
+}
+.clock div{
+   margin: 5px;
+   position: relative;
+}
+.clock span{
+    margin: 5px;
+    position: relative;
+}
+.clock span{
+    width: 100px;
+    height: 80px;
+    background-color: rgba(128, 128, 128, 0.108);
+    opacity:0.8;
+    color: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-size: 50px;
+    border-radius: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.clock .text{
+    color:rgb(34, 51, 114);
+    height: 30px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: rgba(128, 128, 128, 0.108);
+    opacity: 0.8;
+}
+
+.clock #ampm{
+    bottom: 0;
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    font-size: 20px;
+    background: rgb(34, 51, 114);
+}
+#btn{
+    font-size: 1em;
+    color: rgb(34, 51, 114);
+    background:rgba(128, 128, 128, 0.108);
+    padding: 10px 50px;
+    display: inline-block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-left: 10px;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+#btn:hover{
+    background:rgba(34, 51, 114, 0.521);
+    transition: ease-out;
+}
+#container{
+   visibility: hidden;
+}
+@media(max-width:760px){
+    body{
+        background-image: none;
+        background-color: black;
+    }
+    .header{
+        letter-spacing: 10px;
+        font-size: 20px;
+        text-align: center;
+        color: white; 
+    }
+    p{
+        text-align: center;
+        color: white;
+     }
+
+}
